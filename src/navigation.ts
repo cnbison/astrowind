@@ -60,6 +60,10 @@ export const headerData = {
       text: 'Landing',
       links: [
         {
+          text: 'Product Landing',
+          href: getPermalink('/product-landing'),
+        },
+        {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
         },

@@ -1,0 +1,273 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'SCV-OSS — 分布式开源社区社会性贡献价值系统',
+  description: '构建去中心化治理架构，实现价值回归与公平分配。通过AI赋能的贡献评估系统，让开源贡献者的劳动价值得到永久保障和合理回报。',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '加入社区',
+        href: '#get-started',
+        icon: 'tabler:users-group',
+      },
+      {
+        text: '阅读白皮书',
+        href: '#whitepaper',
+        icon: 'tabler:file-text'
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'SCV-OSS 分布式价值系统架构图'
+    }}
+  >
+    <Fragment slot="title">
+      实现价值回归的 <span class="text-accent dark:text-white">分布式开源社区</span>
+      <br class="block sm:hidden" />
+      <span class="hidden sm:inline">社会性贡献价值系统</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      通过AI智能贡献评估系统（AICAS）和区块链技术，构建公平的价值分配体系。
+      让每一位开源贡献者的劳动价值都得到永久保障和合理回报，实现从"我的"到"所有贡献者"的蜕变。
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Section -->
+  <Stats
+    stats={[
+      { title: '天使资金', amount: '1000万¥' },
+      { title: '实施阶段', amount: '4期' },
+      { title: '试点周期', amount: '24个月' },
+      { title: '价值恒定性', amount: '永久' },
+    ]}
+  />
+
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="核心系统组件"
+    title="SCV-OSS 核心功能架构"
+    subtitle="基于马克思主义价值分配理念，结合区块链技术与AI赋能，构建社会智能价值系统"
+    items={[
+      {
+        title: '价值单位"贡"',
+        description: '基于社会平均劳动时间的恒定价值单位，对冲信用货币异化，保障贡献者长期价值储存，具备反异化作用。',
+        icon: 'tabler:coin',
+      },
+      {
+        title: '声誉度量"德"',
+        description: '长期贡献度记录，只增不减，代表物质性功业和精神性德行。与虚拟股权分配挂钩，实现精神与物质回报良性循环。',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'AI智能贡献评估系统（AICAS）',
+        description: '多因素加权模型，以"时间、投入、产出"为通约因子，客观量化代码复杂度、社区互助、治理决策等多元贡献。',
+        icon: 'tabler:brain',
+      },
+      {
+        title: '分布式确权技术',
+        description: '基于区块链/DLT的智能合约部署，实现贡献信息的分布式存储、不可篡改和即时信息确权，确保历史价值不被稀释。',
+        icon: 'tabler:link',
+      },
+      {
+        title: '社会财富池',
+        description: 'SCV与法币系统的耦合中枢，包含货币系统价值池和贡献价值池，保障"贡"的购买力和社区自活能力。',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'NPO/基金会治理架构',
+        description: '公益与商业伴生模式，NPO作为母体组织，采用理事会决策架构，确保治理公共性，实现从"我的"到"所有贡献者"的转变。',
+        icon: 'tabler:building',
+      },
+    ]}
+  />
+
+  <!-- Testimonials Section -->
+  <Testimonials
+    title="理论支撑与实践验证"
+    subtitle="基于深度理论研究与实践探索，构建可信的分布式价值体系"
+    tagline="理论与实践"
+    items={[
+      {
+        title: '马克思主义价值论',
+        img: {
+          src: 'https://images.unsplash.com/photo-1494790108755-2616b332c90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80',
+          alt: '价值理论象征图',
+        },
+        jobTitle: '核心理论支撑',
+        description: "实践马克思关于'价值由谁创造，由谁分配，分配给谁，如何分配'的经典论断。通过构建社会贡献价值主义体系，调和阴阳平衡，损有余而补不足。",
+      },
+      {
+        title: '人工智能赋能',
+        img: {
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80',
+          alt: 'AI技术象征图',
+        },
+        jobTitle: 'AICAS评估系统',
+        description: "通过AI智能贡献评估系统，模拟社会平均必要劳动时间原则，对复杂开源贡献进行多维客观锚定量化，实现贡献（输入）→'贡/德'生成（评估）→回馈（输出）的实时反馈闭环。",
+      },
+      {
+        title: '中华传统文化',
+        img: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80',
+          alt: '传统文化象征图',
+        },
+        jobTitle: '文化传承创新',
+        description: "借鉴超稳定的家族传承保障系统，创新式发扬中华传统文化。'厚德载物'原则指导德治与法治结合，构建敬畏体系和价值共同体。",
+      },
+    ]}
+  />
+
+  <!-- Project Phases Section -->
+  <Pricing
+    id="phases"
+    tagline="项目实施规划"
+    title="分阶段实施路线图"
+    subtitle="系统性推进，确保每一步稳健可靠，从理论验证到全面发展的完整路径"
+    plans={[
+      {
+        title: 'I. 启动与验证',
+        description: '完成核心系统设计与实体设立',
+        price: '6-12个月',
+        period: '',
+        features: [
+          '完成AICAS系统设计',
+          'NPO/基金会实体设立',
+          'SCV智能合约初版部署',
+          '价值体系白皮书发布',
+          '核心团队组建完成',
+          '1000万天使资金到位',
+        ],
+        actions: [
+          {
+            variant: 'outline',
+            text: '了解详情',
+            href: '#phase1',
+          },
+        ],
+      },
+      {
+        title: 'II. 试点与引爆',
+        description: '封闭试点与系统验证',
+        price: '12-24个月',
+        period: '',
+        recommended: true,
+        features: [
+          '选择开源项目封闭试点',
+          '数据采集和AI模型训练',
+          '走通网络系统验证效果',
+          '首批"贡"发行与流转',
+          'AICAS模型准确率达标',
+          '虚拟股权分配方案测试',
+        ],
+        actions: [
+          {
+            variant: 'primary',
+            text: '申请试点',
+            href: '#pilot',
+          },
+        ],
+      },
+      {
+        title: 'III. 扩展与商业化',
+        description: '系统横向扩展与商业转化',
+        price: '24-48个月',
+        period: '',
+        features: [
+          'SCV系统横向扩展',
+          '成立商业控股公司',
+          '首次商业化收益分配',
+          '达千级活跃贡献者',
+          '完成首轮商业化融资',
+          '整合效应全面体现',
+        ],
+        actions: [
+          {
+            variant: 'outline',
+            text: '参与扩展',
+            href: '#expansion',
+          },
+        ],
+      },
+    ]}
+  />
+
+  <!-- FAQs Section -->
+  <FAQs
+    title="常见问题解答"
+    subtitle="关于SCV-OSS系统的核心概念、实施细节和发展前景的详细解答"
+    tagline="FAQs"
+    classes={{ container: 'max-w-4xl' }}
+    items={[
+      {
+        title: '什么是"贡"？它如何实现价值恒定？',
+        description: '"贡"是SCV体系中的基本度量单位，代表社会贡献的价值量化。它基于社会平均劳动时间，对应一小时社会贡献或等价当地社会平均一小时工资的财物贡献。"贡"锚定的是人单位时间一般性贡献的能量耗费，具备价值恒定性，不随时间或总量变化而变化，对冲了信用货币的泛滥和贬值风险。',
+      },
+      {
+        title: '"德"系统如何实现精神与物质回报的良性循环？',
+        description: '"德"是长期贡献和声誉的度量，只增不减。它代表贡献者在社区中积累的物质性功业和精神性德行。"德"与商业控股企业的未来收益挂钩，使贡献者的长期声誉与虚拟股权分配相关联，成功地将传统开源贡献中精神激励（荣誉）与物质回报（财富）的脱节问题转化为良性循环。',
+      },
+      {
+        title: 'AI智能贡献评估系统（AICAS）如何确保公平性？',
+        description: 'AICAS采用多因素加权模型，以"时间、投入、产出"为通约因子，不仅分析贡献的直接投入（代码复杂度、文档完善度），更侧重评估产出侧的长期影响、安全性和测试覆盖率。AI同时量化社会贡献侧如社区互助、导师作用和提案质量，实现客观锚定量化，并通过反作弊机制维护社区伦理和贡献质量。',
+      },
+      {
+        title: 'SCV双轨制设计如何防范资本侵袭？',
+        description: 'SCV采用价值系统与法币系统并行的双轨制设计，两种系统耦合但不直接连通。通过社会财富池作为防火墙，所有法币价值只有在捐赠入池后才能在系统内部流转，而"贡"只在系统内部转换，不在法币系统中发生直接作用。这种设计避免了外部资本对SCV的直接操纵，防止"贡"被用作短期金融投机工具。',
+      },
+      {
+        title: 'NPO/基金会作为母体的治理优势是什么？',
+        description: 'NPO作为母体自带公共属性，确保形成资产归组织集体所有而非个人占有。通过公益与商业伴生模式，NPO持有决策股权成为控股股东，采用理事会集体决策模式，投票权重按决策结果相符性动态调整，确保治理公共性、透明公正，实现从"发起人"到"所有贡献者"的治理转变。',
+      },
+      {
+        title: '项目面临的主要风险及控制措施是什么？',
+        description: '最大风险在于第一个试点模式的探索成功与否。控制措施包括：核心团队需具备社会学、计算机、商业运营复合素养；公益属性、低成本、高粘性、多业态、高效混合经营应对经营风险；NPO为母体的低成本微利模式应对资本侵袭；逐步引入大型NGO或央企战略性参股应对政策风险。',
+      },
+    ]}
+  />
+
+  <!-- Final Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '加入SCV-OSS社区',
+        href: '#join-community',
+        icon: 'tabler:users-group',
+      },
+      {
+        variant: 'secondary',
+        text: '下载完整白皮书',
+        href: '#whitepaper',
+        icon: 'tabler:file-download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      共同构建开源社区的<br class="block sm:hidden" />
+      <span class="hidden sm:inline">价值回归新纪元</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      立即加入这场价值分配体系变革的先行实践。<br class="hidden md:inline" />
+      让我们一起为社会智能价值系统的未来贡献力量。
+    </Fragment>
+  </CallToAction>
+</Layout>
